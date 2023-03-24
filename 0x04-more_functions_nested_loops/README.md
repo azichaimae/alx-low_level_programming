@@ -25,4 +25,3 @@ All of the following files are programs written in C:
 | `10-print_triangle.c` | Prints a triangle |
 | `100-prime_factor.c` | Finds and prints the largest prime factor of the number `612852475143` |
 | `101-print_number.c` | Prints an integer |
-
