@@ -1,20 +1,25 @@
-#include "lists.h"
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * listint_len - returns the number of elements in a linked listint_t list.
- * @h: linked list of type listint_t to traverse
- *
- * Return: number of nodes
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ * Description: singly linked list node structure
  */
-size_t listint_len(const listint_t *h)
+typedef struct listint_s
 {
-    size_t count = 0;
+        int n;
+        struct listint_s *next;
+} listint_t;
 
-    while (h != NULL)
-    {
-        count++;
-        h = h->next;
-    }
+/* function prototypes */
+size_t listint_len(const listint_t *h);
+listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
 
-    return (count);
-}
+#endif
