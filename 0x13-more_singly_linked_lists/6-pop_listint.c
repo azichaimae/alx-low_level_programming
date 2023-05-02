@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * pop listint - deletes the head node of a linked list
+ * pop_listint - deletes the head node of a linked list
  * @head: pointer to the first element in a linked list
  * Return: the data inside the element that was deleted,
- * 0 if the list is empty
+ * or 0 if the list is empty
  */
 int pop_listint(listint_t **head)
 {
